@@ -41,7 +41,17 @@
   --box-shadow:rgba(255, 255, 255, 0.08) 0px 0px 0px 1px inset;
   --radius: 10px;
 }
+@media screen and (max-width: 550px) {
+  :root{
+    --font-size-title1: 48px;
+    --font-weigth-title1: 600;
+    --line-heigth-title1: 48px;
 
+    --font-size-title3: 40px;
+    --font-weigth-title3: 400;
+    --line-heigth-title3: 48px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -90,7 +100,7 @@ h3 {
 }
 .content-limit > div > h3 {
   text-decoration: underline;
-  text-underline-offset: 15px;
+  text-underline-offset: 5px;
   text-decoration-thickness: 4px;
   margin-bottom: 100px;
 }
@@ -131,7 +141,7 @@ Line Height
 76px
 -----------------------------------------
 titre niveau 3
-Manrope - 700
+Manrope - 400
 
 Family
 Manrope, sans-serif

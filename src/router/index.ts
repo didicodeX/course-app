@@ -4,6 +4,7 @@ import CoursesView from '@/views/CoursesView.vue'
 import AboutView from '../views/AboutView.vue'
 import StyleVue from '@/views/StyleVue.vue'
 import InteractionDom from '@/views/InteractionDom.vue'
+import ComposantReactif from '@/views/ComposantReactif.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/courses/DOM',
       name: 'DOM',
       component: InteractionDom
+    },
+    {
+      path: '/courses/Composants-reactifs',
+      name: 'Composants-reactifs',
+      component: ComposantReactif
     },
 
   ],

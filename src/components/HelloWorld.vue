@@ -1,10 +1,3 @@
-<script setup lang="ts">
-import '../assets/base.css'
-defineProps<{
-  msg: string
-}>()
-</script>
-
 <template>
   <section class="padd limit-content">
     <div class="greetings">
@@ -12,6 +5,13 @@ defineProps<{
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import '../assets/base.css'
+defineProps<{
+  msg: string
+}>()
+</script>
 
 <style scoped>
 

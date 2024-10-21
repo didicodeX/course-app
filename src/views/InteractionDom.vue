@@ -16,6 +16,7 @@
     <h1>{{ getTitle() }}</h1>
   
     <input :type="getType()" />
+    <input type="text">
   </div>
 </section>
 
@@ -48,5 +49,11 @@ function getType() {
 span {
   color: red;
   font-weight: bold;
+}
+input{
+  color: #333;
+  padding: 10px 12px;
+
+  width: 300px;
 }
 </style>
