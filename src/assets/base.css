@@ -88,6 +88,12 @@ h3 {
 .content-limit > div:first-child {
   max-width: 1400px;
 }
+.content-limit > div > h3 {
+  text-decoration: underline;
+  text-underline-offset: 15px;
+  text-decoration-thickness: 4px;
+  margin-bottom: 100px;
+}
 .padd {
   padding: 0 5rem;
 }

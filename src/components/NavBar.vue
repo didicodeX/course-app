@@ -6,6 +6,9 @@ const isOpen = ref(false);
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
 };
+const removeMenu = () => {
+  isOpen.value = false;
+}
 
 // Fonction pour fermer le menu si la fenêtre est redimensionnée au-dessus de 500px
 const handleResize = () => {
@@ -27,7 +30,9 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="wrapper">
-    <img class="logo" src="../assets/logo.svg" alt="" />
+    <RouterLink to="/" @click="removeMenu()">
+      <img class="logo" src="../assets/logo.svg" alt="" />
+    </RouterLink>
     <div class="nav-left" :class="{ active: isOpen }">
       <nav>
         <RouterLink to="/" @click="toggleMenu()">Home</RouterLink>
@@ -36,7 +41,7 @@ onBeforeUnmount(() => {
       </nav>
       <div class="button-container">
         <button class="sign-in-btn">Sign in</button>
-        <button class="get-started-btn">Get started</button>
+        <button class="log-in-btn">Log in</button>
       </div>
     </div>
     <button @click="toggleMenu()" class="burger-menu" :class="{ active: isOpen }">
@@ -53,6 +58,8 @@ onBeforeUnmount(() => {
 .logo {
   width: 30px;
   height: 50px;
+  position: relative;
+  z-index: 7;
 }
 .nav-left {
   display: flex;
@@ -60,32 +67,34 @@ onBeforeUnmount(() => {
 .burger-menu{
   display: none;
   position: relative;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 20px;
   border: 0;
   outline: 0;
   cursor: pointer;
   background-color: transparent;
+  padding: 20px;
 }
 .burger-menu span {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background-color: #f1f1f1;
   transition: 0.2s ease-out;
 }
 span:nth-child(1){
 /* background-color: rgb(25, 5, 123); */
-transform: translateY(-7px);
+transform: translateY(-10px);
 }
-/* span:nth-child(2){
-background-color: rgb(5, 123, 17);
+span:nth-child(2){
+/* background-color: rgb(5, 123, 17); */
+height: 1px;
 
-} */
+}
 span:nth-child(3){
 /* background-color: rgb(99, 123, 5); */
-transform: translateY(7px);
+transform: translateY(10px);
 
 }
  .active span:nth-child(1){
@@ -127,7 +136,7 @@ button {
   /* height: 50px; */
 }
 
-.get-started-btn{
+.log-in-btn{
   background-color: var(--primary-color);
 }
 .sign-in-btn{

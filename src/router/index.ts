@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CoursesView from '@/views/CoursesView.vue'
 import AboutView from '../views/AboutView.vue'
-import StyleVue from '@/components/StyleVue.vue'
+import StyleVue from '@/views/StyleVue.vue'
+import InteractionDom from '@/views/InteractionDom.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,6 +12,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView,
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: AboutView,
     },
     {
       path: '/courses',
@@ -23,10 +29,11 @@ const router = createRouter({
       component: StyleVue
     },
     {
-      path: '/about',
-      name: 'about',
-      component: AboutView,
+      path: '/courses/DOM',
+      name: 'DOM',
+      component: InteractionDom
     },
+
   ],
 })
 

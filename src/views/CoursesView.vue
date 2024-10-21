@@ -7,12 +7,10 @@ import '../assets/base.css'
     <div>
       <h3>This is an Courses page</h3>
       <ul>
-        <li>
-          <RouterLink to="/courses/style-et-classe"
-            >Chapitre 5 : Le style et les classes</RouterLink
-          >
-        </li>
+        <li><RouterLink to="/courses/DOM">Chapitre 3 : Intéragir avec le DOM</RouterLink></li>
+        <li><RouterLink to="/courses/style-et-classe">Chapitre 5 : Le style et les classes</RouterLink></li>
       </ul>
+      
     </div>
   </section>
 </template>
