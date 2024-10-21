@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+@font-face {
+  font-family: "Refile";
+  src: url(./fonts/Refile.otf);
+}
+
+:root {
+  --font-title: "Manrope", sans-serif;
+  --font-size-title1: 94px;
+  --font-weigth-title1: 600;
+  --line-heigth-title1: 94px;
+
+  --font-size-title2: 72px;
+  --font-weigth-title2: 800;
+  --line-heigth-title2: 76px;
+
+  --font-size-title3: 40px;
+  --font-weigth-title3: 400;
+  --line-heigth-title3: 48px;
+
+  --font-text: "Inter", sans-serif;
+
+  --font-special: "Refile";
+
+  --font-size-link: 13px;
+  --font-weight-link: 500;
+  --text-color: #fff;
+  --link-color: #ffffffc8;
+  --link-color-hover: #ffffff;
+  --line-heigth-link: 18px;
+
+  --font-size-text: 16px;
+  --font-weigth-text: 400;
+  --line-heigth-text: 32px;
+
+  --primary-color: #1574ef;
+  --secondary-color:#313d5e;
+
+  --background-color: #1c1f25;
+
+  --box-shadow:rgba(255, 255, 255, 0.08) 0px 0px 0px 1px inset;
+  --radius: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-text);
+  color: var(--text-color);
+}
+li{
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-size: var(--font-size-link);
+  font-weight: var(--font-weight-link);
+  line-height: var(--line-heigth-link);
+  color: var(--link-color);
+}
+ a:hover{
+  color: var(--link-color-hover);
+}
+body {
+  background-color: var(--background-color);
+}
+h1,h2,h3 {
+  margin-bottom: 10px;
+}
+h1 {
+  font-family: var(--font-title);
+  font-size: var(--font-size-title1);
+  font-weight: var(--font-weigth-title1);
+  line-height: var(--line-heigth-title1);
+}
+h3 {
+  font-family: var(--font-title);
+  font-size: var(--font-size-title3);
+  font-weight: var(--font-weigth-title3);
+  line-height: var(--line-heigth-title3);
+}
+
+.content-limit {
+  display: flex;
+  /* justify-content: center; */
+}
+.content-limit > div:first-child {
+  max-width: 1400px;
+}
+.padd {
+  padding: 0 5rem;
+}
+/* 
+titre niveau 1
+Manrope - 600
+
+Family
+Manrope, sans-serif
+Style
+normal
+Weight
+600
+Color
+rgb(255, 255, 255)
+Size
+94px
+Line Height
+94px 
+---------------------------------------
+titre niveau 2
+Manrope - 800
+
+Family
+Manrope, sans-serif
+Style
+normal
+Weight
+800
+Color
+rgb(105, 245, 255)
+Size
+72px
+Line Height
+76px
+-----------------------------------------
+titre niveau 3
+Manrope - 700
+
+Family
+Manrope, sans-serif
+Style
+normal
+Weight
+700
+Color
+rgb(105, 245, 255)
+Size
+40px
+Line Height
+48px
+-----------------------------------------
+titre niveau 3
+Manrope - 700
+
+Family
+Manrope, sans-serif
+Style
+normal
+Weight
+700
+Color
+rgb(105, 245, 255)
+Size
+40px
+Line Height
+48px
+-----------------------------------
+titre niveau 4
+Manrope - 700
+
+Family
+Manrope, sans-serif
+Style
+normal
+Weight
+700
+Color
+rgb(255, 255, 255)
+Size
+32px
+Line Height
+38px
+-----------------------------------------
+titre niveau 6
+Inter - 500
+
+Family
+Inter, sans-serif
+Style
+normal
+Weight
+500
+Color
+rgb(255, 255, 255)
+Size
+13px
+Line Height
+18px
+------------------------------
+link
+Inter - 500
+
+Family
+Inter, sans-serif
+Style
+normal
+Weight
+500
+Color
+rgb(255, 255, 255)
+Size
+13px
+Line Height
+18px
+------------------------------------
+Texte
+Inter - 500
+
+Family
+Inter, sans-serif
+Style
+normal
+Weight
+500
+Color
+rgb(255, 255, 255)
+Size
+16px
+Line Height
+32px
+--------------------------------------
+comment - text (avis)
+Inter - 400
+
+Family
+Inter, sans-serif
+Style
+normal
+Weight
+400
+Color
+rgb(0, 0, 0)
+Size
+24px
+Line Height
+38px
+
+
+*/
