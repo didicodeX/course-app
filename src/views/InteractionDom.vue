@@ -56,4 +56,7 @@ input{
 
   width: 300px;
 }
+.montitre2 {
+  background-color: rgb(4, 2, 24);
+}
 </style>

@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import './assets/base.css'
-import Navbar from './components/Navbar.vue'
+import Navbar from './components/NavBar.vue'
 </script>
 
 <style scoped>

@@ -152,7 +152,7 @@ button {
   a {
     font-size: 1rem;
   }
-  nav{
+  nav {
     flex-grow: 0;
   }
   button {
@@ -161,8 +161,6 @@ button {
   }
   .nav-left {
     display: none;
-
-
   }
   .burger-menu {
     display: block;
@@ -185,7 +183,7 @@ button {
     justify-content: center;
     gap: 50px;
   }
-  .wrapper{
+  .wrapper {
     overflow: hidden;
   }
 }

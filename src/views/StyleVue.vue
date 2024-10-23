@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
   <section class="padd content-limit">
     <div>
@@ -9,3 +5,7 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts"></script>
+
+<style scoped></style>

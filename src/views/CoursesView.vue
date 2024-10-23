@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import '../assets/base.css'
-</script>
-
 <template>
   <section class="padd content-limit">
     <div>
@@ -26,6 +22,10 @@ import '../assets/base.css'
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+
+</script>
 
 <style scoped>
 a {
