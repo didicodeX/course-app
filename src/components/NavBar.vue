@@ -14,7 +14,7 @@
         <button class="log-in-btn">Log in</button>
       </div>
     </div>
-    <button
+    <div
       @click="toggleMenu()"
       class="burger-menu"
       :class="{ active: isOpen }"
@@ -22,7 +22,7 @@
       <span></span>
       <span></span>
       <span></span>
-    </button>
+    </div>
   </div>
 </template>
 
@@ -73,7 +73,8 @@ onBeforeUnmount(() => {
   display: none;
   position: relative;
   height: 25px;
-  width: 20px;
+  width: 100px;
+  max-width: 20px;
   border: 0;
   outline: 0;
   cursor: pointer;
@@ -130,15 +131,6 @@ nav {
   justify-self: end;
 }
 
-button {
-  padding: 10px 10px;
-  border-radius: 8px;
-  border: 0;
-  color: var(--text-color);
-  cursor: pointer;
-  width: 100px;
-  /* height: 50px; */
-}
 
 .log-in-btn {
   background-color: var(--primary-color);

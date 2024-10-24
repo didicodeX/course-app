@@ -18,6 +18,10 @@
             Chapitre 5 : Le style et les classes
           </RouterLink>
         </li>
+        <li>
+          <RouterLink to="/courses/Directives-structurelles">
+            Chapitre 6 : Les directives structurelles          </RouterLink>
+        </li>
       </ul>
     </div>
   </section>

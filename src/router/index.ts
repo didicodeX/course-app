@@ -5,6 +5,7 @@ import AboutView from '../views/AboutView.vue'
 import StyleVue from '@/views/StyleVue.vue'
 import InteractionDom from '@/views/InteractionDom.vue'
 import ComposantReactif from '@/views/ComposantReactif.vue'
+import DirectivesStructurelles from '@/views/DirectivesStructurelles.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,11 +26,6 @@ const router = createRouter({
       component: CoursesView,
     },
     {
-      path: '/courses/style-et-classe',
-      name: 'style-en-Vuejs',
-      component: StyleVue
-    },
-    {
       path: '/courses/DOM',
       name: 'DOM',
       component: InteractionDom
@@ -38,6 +34,16 @@ const router = createRouter({
       path: '/courses/Composants-reactifs',
       name: 'Composants-reactifs',
       component: ComposantReactif
+    },
+    {
+      path: '/courses/style-et-classe',
+      name: 'style-en-Vuejs',
+      component: StyleVue
+    },
+    {
+      path: '/courses/Directives-structurelles',
+      name: 'Directives-structurelles',
+      component: DirectivesStructurelles
     },
 
   ],
