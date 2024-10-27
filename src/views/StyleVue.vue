@@ -20,9 +20,18 @@
       </div>
       <div class="lesson">
         <h3>Leçon 29 : La liaison de styles</h3>
+        <h4 :style="{'font-family':fontFamily}">Bonjour le monde</h4>
+        <h5 :style="h5style">H5 syle</h5>
+        <!-- La syntaxe la plus utiliser -->
+         <p :style="{fontSize: fontSize + 'px'}">La syntaxe la plus utiliser</p>
+         <div class="btns" >
+          <button @click="fontSize += 10">+</button>
+          <button @click="fontSize -= 10">-</button>
+        </div>
       </div>
       <div class="lesson">
         <h3>Leçon 30 : Utilisation de Sass</h3>
+        <p>Bonjour <span>Le monde</span> </p>
       </div>
     </div>
   </section>
@@ -43,20 +52,26 @@ const input = reactive({
 })
 
 const inputOngoing = computed(() => input.focus && input.value.length)
-const inputError = computed(
-  () => !input.focus && input.touched && input.value.length < 5,
-)
-const inputValid = computed(
-  () => input.touched && !input.focus && !inputError.value,
-)
+const inputError = computed(() => !input.focus && input.touched && input.value.length < 5)
+const inputValid = computed(() => input.touched && !input.focus && !inputError.value)
 
 console.log(inputOngoing)
+
+const fontFamily = ref("Impact")
+const fontSize = ref(10);
+
+const h5style = reactive({
+  fontSize: '5rem',
+  color: 'Blue',
+  fontFamily: 'Arial'
+})
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .hello {
   color: black;
   background-color: aliceblue;
+  font-family: Impact;
 }
 .input {
   border: 2px solid #000;
@@ -73,5 +88,15 @@ console.log(inputOngoing)
 }
 .inputValid {
   border-color: green;
+}
+.btns{
+  display: flex;
+  gap: 20px;
+}
+p {
+  background-color: black;
+  span {
+    color: crimson;
+  }
 }
 </style>
