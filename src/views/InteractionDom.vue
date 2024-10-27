@@ -1,7 +1,7 @@
 <template>
 <section class="padd content-limit">
   <div>
-    <h3>Chapitre 3 : Intéragir avec le DOM</h3>
+    <h2>Chapitre 3 : Intéragir avec le DOM</h2>
     <h1 v-bind:class="h1title" :id="h1id">
       Bonjour <span>{{ `${name.toUpperCase()} !` }}</span>
     </h1>

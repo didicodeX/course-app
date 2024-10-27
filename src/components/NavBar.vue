@@ -73,13 +73,12 @@ onBeforeUnmount(() => {
   display: none;
   position: relative;
   height: 25px;
-  width: 100px;
   max-width: 20px;
   border: 0;
   outline: 0;
   cursor: pointer;
   background-color: transparent;
-  padding: 20px;
+  padding: 15px;
 }
 .burger-menu span {
   position: absolute;
@@ -166,6 +165,7 @@ nav {
     background-color: #16181d;
     flex-direction: column;
     justify-content: center;
+    /* padding-top: 200px; */
     align-items: center;
     gap: 50px;
   }

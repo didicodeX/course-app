@@ -1,7 +1,7 @@
 <template>
   <section class="padd content-limit">
     <div>
-      <h3>This is an Home page</h3>
+      <h2>This is an Home page</h2>
     </div>
   </section>
 </template>

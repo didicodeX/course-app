@@ -1,7 +1,7 @@
 <template>
   <section class="padd content-limit">
     <div>
-      <h3>Chapitre 4 : Rendre les composants réactifs</h3>
+      <h2>Chapitre 4 : Rendre les composants réactifs</h2>
 
       <div class="lesson">
         <h3>Leçon 21 : La fonction reactive()</h3>
@@ -154,7 +154,6 @@ watchEffect(() => {
   product.priceHT = price.value; // grace a ca j'ai une refence et a chaue fois que je vais modifie mon priceHT il vas se lancer. donc priceHT est considerer comme une dependance
   product.lastModif = Date.now();
   console.log(product);
-  
 })
 
 </script>

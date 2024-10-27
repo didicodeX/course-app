@@ -1,7 +1,7 @@
 <template>
   <section class="padd content-limit">
     <div>
-      <h3>This is an Courses page</h3>
+      <h2>This is an Courses page</h2>
       <ul class="chapter-list">
         <li>
           <RouterLink to="/courses/DOM">
@@ -20,22 +20,27 @@
         </li>
         <li>
           <RouterLink to="/courses/Directives-structurelles">
-            Chapitre 6 : Les directives structurelles          </RouterLink>
+            Chapitre 6 : Les directives structurelles
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/courses/Bases-des-composants">
+            Chapitre 7 : Les bases des composants
+          </RouterLink>
         </li>
       </ul>
     </div>
   </section>
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 a {
   font-size: 18px;
 }
 .chapter-list {
+  margin: 5rem 0;
   display: grid;
   gap: 20px;
 }

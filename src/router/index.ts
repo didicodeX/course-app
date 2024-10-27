@@ -6,6 +6,7 @@ import StyleVue from '@/views/StyleVue.vue'
 import InteractionDom from '@/views/InteractionDom.vue'
 import ComposantReactif from '@/views/ComposantReactif.vue'
 import DirectivesStructurelles from '@/views/DirectivesStructurelles.vue'
+import BasesComposants from '@/views/BasesComposants.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,7 +46,11 @@ const router = createRouter({
       name: 'Directives-structurelles',
       component: DirectivesStructurelles
     },
-
+    {
+      path: '/courses/Bases-des-composants',
+      name: 'Bases-des-composants',
+      component: BasesComposants
+    },
   ],
 })
 

@@ -7,22 +7,18 @@
 </template>
 
 <script setup lang="ts">
-
-defineProps<{
-  msg: string
-}>()
+defineProps<{msg: string}>();
 </script>
 
 <style scoped>
-
-.green{
+.green {
   font-family: var(--font-special);
 }
 h3 {
   font-size: 1.2rem;
 }
 .greetings {
-padding: 100px 0;
+  padding: 100px 0;
   display: flex;
   flex-direction: column;
 }
