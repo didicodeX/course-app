@@ -10,7 +10,7 @@ import './assets/base.css'
 import Navbar from './components/NavBar.vue'
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 /* nav a.router-link-exact-active {
   color: #fff;
 } */

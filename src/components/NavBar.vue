@@ -122,6 +122,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 15px;
+  position: sticky;
+  top: 0;
+  background: #1c1f2586;
 }
 
 .button-container {
@@ -162,7 +165,8 @@ nav {
     position: fixed;
     inset: 0;
     z-index: 1;
-    background-color: #16181d;
+    background-color: #16181dab;
+    backdrop-filter: blur(10px);
     flex-direction: column;
     justify-content: center;
     /* padding-top: 200px; */
@@ -177,6 +181,8 @@ nav {
   }
   .wrapper {
     overflow: hidden;
+    /* position: fixed; */
+    /* width: 100%; */
   }
 }
 </style>
