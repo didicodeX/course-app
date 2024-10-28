@@ -8,7 +8,6 @@
   
     <div v-bind="obj">
       <h2 v-html="baliseName"></h2>
-  
     </div>
   
     <input :type="inputType" />
