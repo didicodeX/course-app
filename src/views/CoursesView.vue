@@ -1,24 +1,47 @@
-<script setup lang="ts">
-import '../assets/base.css'
-</script>
-
 <template>
   <section class="padd content-limit">
     <div>
-      <h3>This is an Courses page</h3>
-      <ul>
+      <h2>This is an Courses page</h2>
+      <ul class="chapter-list">
         <li>
-          <RouterLink to="/courses/style-et-classe"
-            >Chapitre 5 : Le style et les classes</RouterLink
-          >
+          <RouterLink to="/courses/DOM">
+            Chapitre 3 : Intéragir avec le DOM
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/courses/Composants-reactifs">
+            Chapitre 4 : Rendre les composants réactifs
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/courses/style-et-classe">
+            Chapitre 5 : Le style et les classes
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/courses/Directives-structurelles">
+            Chapitre 6 : Les directives structurelles
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/courses/Bases-des-composants">
+            Chapitre 7 : Les bases des composants
+          </RouterLink>
         </li>
       </ul>
     </div>
   </section>
 </template>
 
+<script setup lang="ts"></script>
+
 <style scoped>
 a {
   font-size: 18px;
+}
+.chapter-list {
+  margin: 5rem 0;
+  display: grid;
+  gap: 20px;
 }
 </style>

@@ -37,3 +37,33 @@ npm run build
 ```sh
 npm run lint
 ```
+
+# Les directives `v-once` et `v-memo` en Vue.js
+
+## La directive `v-once`
+
+La directive `v-once` permet de rendre un élément une seule fois et de ne plus le mettre à jour ensuite.
+
+Autrement dit, après le premier rendu par **Vue.js**, les éléments sur lesquels sont appliqués la directive `v-once` sont considérés comme étant du contenu statique.
+
+Cette directive permet d'optimiser les performances, par exemple sur un composant contenant des composants étant mis à jour très souvent et d'autres composants n'ayant pas besoin d'être mis à jour.
+
+### Exemple :
+```html
+<ul>
+  <li v-for="i in list" v-once>{{i}}</li>
+</ul>
+<enfant1></enfant1>
+```
+
+## La directive `v-memo`
+
+La directive `v-memo` est assez proche de la logique de computed() : elle permet de suivre des dépendances et de mettre à jour un ou plusieurs éléments du DOM uniquement si ces dépendances sont modifiées.
+
+### Exemple :
+```html
+<div v-memo="[valeurA, valeurB, valeurC]">
+  ...
+</div>
+<enfant1></enfant1>
+```
