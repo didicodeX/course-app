@@ -14,11 +14,7 @@
         <button class="log-in-btn">Log in</button>
       </div>
     </div>
-    <div
-      @click="toggleMenu()"
-      class="burger-menu"
-      :class="{ active: isOpen }"
-    >
+    <div @click="toggleMenu()" class="burger-menu" :class="{ active: isOpen }">
       <span></span>
       <span></span>
       <span></span>
@@ -27,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount} from 'vue'
 
 const isOpen = ref(false)
 
@@ -124,7 +120,7 @@ nav {
   padding: 0 15px;
   position: sticky;
   top: 0;
-  background: #1c1f2586;
+  background-color: var(--background-color);
 }
 
 .button-container {
@@ -132,7 +128,6 @@ nav {
   gap: 20px;
   justify-self: end;
 }
-
 
 .log-in-btn {
   background-color: var(--primary-color);

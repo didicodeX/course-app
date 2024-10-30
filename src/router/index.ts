@@ -5,6 +5,7 @@ import AboutView from '../views/AboutView.vue'
 import StyleVue from '@/views/StyleVue.vue'
 import InteractionDom from '@/views/InteractionDom.vue'
 import ComposantReactif from '@/views/ComposantReactif.vue'
+import AvanceesComposant from '@/views/AvanceesComposant.vue'
 import DirectivesStructurelles from '@/views/DirectivesStructurelles.vue'
 import BasesComposants from '@/views/BasesComposants.vue'
 
@@ -50,6 +51,11 @@ const router = createRouter({
       path: '/courses/Bases-des-composants',
       name: 'Bases-des-composants',
       component: BasesComposants
+    },
+    {
+      path: '/courses/Fonctionnalités-avancées-des-composants',
+      name: 'Fonctionnalités-avancées-des-composants',
+      component: AvanceesComposant
     },
   ],
 })

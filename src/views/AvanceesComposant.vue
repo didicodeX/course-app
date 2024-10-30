@@ -1,0 +1,52 @@
+<template>
+  <section class="padd content-limit">
+    <div>
+      <h2>Chapitre 9 : Les fonctionnalités avancées des composants</h2>
+      <div class="lesson">
+        <h3>Leçon 57 : Utilisation de la directive v-model sur des composants</h3>
+        <Article v-model:agree="content" v-model:name="name"/>
+        <p>{{ content }}</p>
+        <p>{{ name }}</p>
+      </div>
+      <div class="lesson">
+        <h3>Leçon 58 : Cascade d'attributs</h3>
+      </div>
+      <div class="lesson">
+        <h3>Leçon 59 : Présentation des slots</h3>
+      </div>
+      <div class="lesson">
+        <h3>Leçon 60 : Portées des slots</h3>
+      </div>
+      <div class="lesson">
+        <h3>Leçon 61 : Provide et Inject</h3>
+      </div>
+      <div class="lesson">
+        <h3>Leçon 62 : Utilisation des symboles avec provide et inject</h3>
+      </div>
+      <div class="lesson">
+        <h3>Leçon 63 : Les fonctions utilitaires de l'API réactivité</h3>
+      </div>
+      <div class="lesson">
+        <h3>Leçon 64 : Les composants asynchrones</h3>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts">
+import {ref} from "vue"
+import Article from "@/components/ComponentArticle.vue";
+
+
+// const content = ref("");
+const content = ref(true);
+const name = ref("");
+</script>
+
+
+<style scoped lang="scss"></style>
+
+
+<!-- Faire réparer votre iPhone au Canada n'était pas une solution a cause
+du prix de réparation jusqu'à aujourd'hui. Nous ne sommes pas Apple et
+vous ne paierez pas aussi chère que chez Apple -->
