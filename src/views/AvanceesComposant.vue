@@ -13,9 +13,31 @@
       </div>
       <div class="lesson">
         <h3>Leçon 59 : Présentation des slots</h3>
+        <!-- <Article>
+          <h1>Titre de l'article</h1>
+          <strong>Author : {{ author }}</strong>
+          <AppButton>Lire</AppButton>
+          <AppButton/>
+        </Article> -->
+        <Article>
+          <template v-slot:header>
+            <h1>Titre de l'article</h1>
+            <strong>Author : {{ author }}</strong>
+          </template>
+          <template #content>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </template>
+          <!-- <template v-slot:[bottom]>
+            <AppButton>Lire</AppButton>
+          </template> -->
+          <template #[bottom]>
+            <AppButton>Lire</AppButton>
+          </template>
+        </Article>
       </div>
       <div class="lesson">
         <h3>Leçon 60 : Portées des slots</h3>
+
       </div>
       <div class="lesson">
         <h3>Leçon 61 : Provide et Inject</h3>
@@ -36,11 +58,15 @@
 <script setup lang="ts">
 import {ref} from "vue"
 import Article from "@/components/ComponentArticle.vue";
-
+import AppButton from "@/components/AppButton.vue";
 
 // const content = ref("");
 const content = ref(true);
 const name = ref("");
+
+//========= losson 59 =======
+const author = ref("Jean de la tour")
+const bottom = "cta";
 </script>
 
 
