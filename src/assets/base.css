@@ -106,6 +106,14 @@ h3 {
   line-height: var(--line-heigth-title3);
 }
 
+input {
+  color: #333;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 7px;
+  border: none;
+}
 .content-limit {
   display: flex;
   /* justify-content: center; */
