@@ -8,6 +8,7 @@ import ComposantReactif from '@/views/ComposantReactif.vue'
 import AvanceesComposant from '@/views/AvanceesComposant.vue'
 import DirectivesStructurelles from '@/views/DirectivesStructurelles.vue'
 import BasesComposants from '@/views/BasesComposants.vue'
+import FormulaireVue from '@/views/FormulaireVue.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -56,6 +57,11 @@ const router = createRouter({
       path: '/courses/Fonctionnalités-avancées-des-composants',
       name: 'Fonctionnalités-avancées-des-composants',
       component: AvanceesComposant
+    },
+    {
+      path: '/courses/Formulaires',
+      name: 'Formulaires',
+      component: FormulaireVue
     },
   ],
 })

@@ -33,6 +33,11 @@
             Chapitre 9 : Les fonctionnalités avancées des composants
           </RouterLink>
         </li>
+        <li>
+          <RouterLink to="/courses/Formulaires">
+            Chapitre 11 : Les formulaires avec Vee-validate et Zod
+          </RouterLink>
+        </li>
       </ul>
     </div>
   </section>
