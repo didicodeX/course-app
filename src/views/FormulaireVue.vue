@@ -45,6 +45,10 @@
       </div>
       <div class="lesson">
         <h3>Leçon 78 : Soumission du formulaire</h3>
+        <form action="" @submit="onSubmit">
+          <input type="text" />
+          <button type="submit">Envoyer</button>
+        </form>
       </div>
       <div class="lesson">
         <h3>Leçon 79 : Autres options lors de l'envoi d'un formulaire</h3>
@@ -128,6 +132,19 @@ const {
   errorMessage: confirmPasswordError,
 } = useField('validatePassword', { validateOnValueUpdate: false })
 // const { value: emailValue, errorMessage: emailError } = useField('email')
+
+//======================================================================================
+//============   Leçon 78 : Soumission du formulaire ========================
+//======================================================================================
+
+const { handleSubmit } = useForm()
+const onSubmit = handleSubmit(
+  values => {
+    console.log(values)
+    // Envoi des valeurs au serveur…
+  },
+  ({ values, errors, results }) => console.log(values, errors, results)
+)
 </script>
 
 <style scoped lang="scss">
