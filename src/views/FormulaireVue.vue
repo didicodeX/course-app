@@ -58,16 +58,30 @@
       </div>
       <div class="lesson">
         <h3>Leçon 81 : Ajout dynamique de champs</h3>
+        <form action="">
+          <div>
+            <label for="">Activites</label>
+            <button @click="push({name: '', comment: ''})" type="button">Ajouter une activite</button>
+          </div>
+          <div v-for="(field, i) in fields" :key="field.key">
+            <Field :name="`hobbies[${i}].name`"/>
+            <Field :name="`hobbies[${i}].comment`"/>
+            <button @click="remove(i)">remove</button>
+          </div>
+          <pre>
+            {{ values }}
+          </pre>
+        </form>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { useField, useForm } from 'vee-validate'
+import { useField, useFieldArray, useForm, Field } from 'vee-validate'
 import { z } from 'zod'
 import { toTypedSchema } from '@vee-validate/zod'
-// import { computed } from 'vue';
+// import { ref } from 'vue'
 // const validationSchema = z.object({
 //   username: z
 //     .string()
@@ -143,8 +157,19 @@ const onSubmit = handleSubmit(
     console.log(values)
     // Envoi des valeurs au serveur…
   },
-  ({ values, errors, results }) => console.log(values, errors, results)
+  ({ values, errors, results }) => console.log(values, errors, results),
 )
+
+//======================================================================================
+//============   Leçon 81 : Ajout dynamique de champs ========================
+//======================================================================================
+// const values = ref(['Activité 1'])
+
+const { values } = useForm()
+
+const { fields, push, remove } = useFieldArray('hobbies')
+
+// console.log(props);
 </script>
 
 <style scoped lang="scss">
