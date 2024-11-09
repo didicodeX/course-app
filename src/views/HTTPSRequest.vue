@@ -1,7 +1,7 @@
 <template>
   <section class="padd content-limit">
     <div>
-      <h2></h2>
+      <h2>Chapitre 12 : HTTP</h2>
       <div class="lesson">
         <h3>Leçon 82 : Introduction et requête AJAX</h3>
       </div>
