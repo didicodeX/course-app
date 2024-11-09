@@ -38,6 +38,11 @@
             Chapitre 11 : Les formulaires avec Vee-validate et Zod
           </RouterLink>
         </li>
+        <li>
+          <RouterLink to="/courses/HTTP">
+            Chapitre 12 : HTTP
+          </RouterLink>
+        </li>
       </ul>
     </div>
   </section>

@@ -9,6 +9,7 @@ import AvanceesComposant from '@/views/AvanceesComposant.vue'
 import DirectivesStructurelles from '@/views/DirectivesStructurelles.vue'
 import BasesComposants from '@/views/BasesComposants.vue'
 import FormulaireVue from '@/views/FormulaireVue.vue'
+import HTTPSRequest from '@/views/HTTPSRequest.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -62,6 +63,11 @@ const router = createRouter({
       path: '/courses/Formulaires',
       name: 'Formulaires',
       component: FormulaireVue
+    },
+    {
+      path: '/courses/HTTP',
+      name: 'HTTP',
+      component: HTTPSRequest
     },
   ],
 })
