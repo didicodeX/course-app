@@ -43,6 +43,11 @@
             Chapitre 12 : HTTP
           </RouterLink>
         </li>
+        <li>
+          <RouterLink to="/courses/Composants-natifs">
+            Chapitre 13 : Composants natifs
+          </RouterLink>
+        </li>
       </ul>
     </div>
   </section>

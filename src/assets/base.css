@@ -197,9 +197,7 @@ button {
   border-radius: 8px;
   border: 0;
   cursor: pointer;
-  /* width: 100px; */
-  min-width: 100px;
-  max-width: 150px;
+  width: max-content;
   background-color: brown;
   /* height: 50px; */
 }
@@ -212,6 +210,11 @@ button {
   text-decoration: underline;
   text-underline-offset: 5px;
   text-decoration-thickness: 4px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
 }
 /* 
 titre niveau 1
