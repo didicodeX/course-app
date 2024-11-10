@@ -67,3 +67,4 @@ La directive `v-memo` est assez proche de la logique de computed() : elle permet
 </div>
 <enfant1></enfant1>
 ```
+Tout à fait, par exemple, cela peut être une interface pour utiliser un logiciel ou un service tiers sur le Web. Une API est simplement une interface logicielle qui permet de connecter un logiciel ou un service à un autre logiciel ou service.
