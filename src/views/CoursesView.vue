@@ -39,13 +39,39 @@
           </RouterLink>
         </li>
         <li>
-          <RouterLink to="/courses/HTTP">
-            Chapitre 12 : HTTP
-          </RouterLink>
+          <RouterLink to="/courses/HTTP"> Chapitre 12 : HTTP </RouterLink>
         </li>
         <li>
           <RouterLink to="/courses/Composants-natifs">
             Chapitre 13 : Composants natifs
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/courses/Composables-directives-plugins">
+            Chapitre 15 : Composables, directives et plugins
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/courses/Animations">
+            Chapitre 16 : Les animations
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/courses/Vue-router">
+            Chapitre 18 : Vue-router
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/courses/Pinia"> Chapitre 20 : Pinia Vue </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/courses/Mise-en-production">
+            Chapitre 22 : Mise en production d'une application Vue
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/courses/Authentification-JWT">
+            Chapitre 23 : Gestion de l'authentification avec JWT
           </RouterLink>
         </li>
       </ul>

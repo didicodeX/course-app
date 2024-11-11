@@ -11,6 +11,12 @@ import BasesComposants from '@/views/BasesComposants.vue'
 import FormulaireVue from '@/views/FormulaireVue.vue'
 import HTTPSRequest from '@/views/HTTPSRequest.vue'
 import ComposantsNatifs from '@/views/ComposantsNatifs.vue'
+import ComposablesDirectivesPlugins from '@/views/ComposablesDirectivesPlugins.vue'
+import AnimationsVue from '@/views/AnimationsVue.vue'
+import VueRouter from '@/views/VueRouter.vue'
+import PiniaVue from '@/views/PiniaVue.vue'
+import MiseEnProduction from '@/views/MiseEnProduction.vue'
+import AuthentificationJWT from '@/views/AuthentificationJWT.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -74,6 +80,36 @@ const router = createRouter({
       path: '/courses/Composants-natifs',
       name: 'Composants-natifs',
       component: ComposantsNatifs
+    },
+    {
+      path: '/courses/Composables-directives-plugins',
+      name: 'Composables-directives-plugins',
+      component: ComposablesDirectivesPlugins
+    },
+    {
+      path: '/courses/Animations',
+      name: 'Animations',
+      component: AnimationsVue
+    },
+    {
+      path: '/courses/Vue-router',
+      name: 'Vue-router',
+      component: VueRouter
+    },
+    {
+      path: '/courses/Pinia',
+      name: 'Pinia',
+      component: PiniaVue
+    },
+    {
+      path: '/courses/Mise-en-production',
+      name: 'Mise-en-production',
+      component: MiseEnProduction
+    },
+    {
+      path: '/courses/Authentification-JWT',
+      name: 'Authentification-JWT',
+      component: AuthentificationJWT
     },
   ],
 })
