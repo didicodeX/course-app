@@ -212,6 +212,9 @@ button {
   text-decoration-thickness: 4px;
 }
 
+input:focus {
+  outline: 2px solid transparent;
+}
 .buttons {
   display: flex;
   gap: 15px;

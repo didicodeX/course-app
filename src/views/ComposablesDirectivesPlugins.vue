@@ -21,7 +21,7 @@
           </div>
           <ul v-else-if="data">
             <li v-for="(post, i) in data" :key="post.id">
-              <h3>{{ i + 1}}. {{ post.title }}</h3>
+              <h3>{{ i + 1 }}. {{ post.title }}</h3>
               <p>{{ post.body }}</p>
             </li>
           </ul>
@@ -30,6 +30,7 @@
       </div>
       <div class="lesson">
         <h3>Leçon 98 : Création de directives personnalisées</h3>
+        <input v-focus="{ firstFocus: true, color: 'crimson' }" type="text" />
       </div>
       <div class="lesson">
         <h3>Leçon 99 : Les plugins</h3>
@@ -45,12 +46,16 @@ const { secondes, totalIddleTime } = useIddleTime()
 
 //>Leçon 97 : Utilisation d'un composable asynchrone<
 import { useFetch } from '@/users.service'
-import type { Post } from '@/interfaces/Post.interface';
+import type { Post } from '@/interfaces/Post.interface'
 
 const { data, error } = useFetch<Post[]>(
   'https://jsonplaceholder.typicode.com/posts?_limit=15',
 )
 console.log(data)
+
+//Leçon 98 : Création de directives personnalisées
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+@import '../assets/base.css';
+</style>
