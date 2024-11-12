@@ -13,7 +13,7 @@
       <div class="lesson">
         <h3>Leçon 97 : Utilisation d'un composable asynchrone</h3>
         <div>
-          <h1>Liste des 10 premiers posts</h1>
+          <h4>Liste des 10 premiers posts</h4>
           <div v-if="error">
             <p style="color: red">
               Erreur lors de la récupération des posts: {{ error }}
@@ -21,7 +21,7 @@
           </div>
           <ul v-else-if="data">
             <li v-for="(post, i) in data" :key="post.id">
-              <h3>{{ i + 1 }}. {{ post.title }}</h3>
+              <h4>{{ i + 1 }}. {{ post.title }}</h4>
               <p>{{ post.body }}</p>
             </li>
           </ul>
