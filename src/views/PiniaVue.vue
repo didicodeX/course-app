@@ -7,18 +7,28 @@
         <button @click="addTodo" class="btn btn-primary mr-20">Ajouter</button>
       </div>
       <ul class="todos">
-        <li
-          v-for="(todo, index) in todos"
-          :key="todo.content"
-          class="d-flex align-items-center todo"
-          @click="toggleDone(index)"
-        >
-          <input :checked="todo.done" type="checkbox" v-model="todo.done" />
-          <span>{{ todo.content }} </span>
+        <li v-for="(todo, index) in todos" :key="todo.content">
+          <div
+            v-if="!todo.editMode"
+            class="d-flex align-items-center todo"
+            @click="toggleDone(index)"
+          >
+            <input :checked="todo.done" type="checkbox" />
+            <span>{{ todo.content }} </span>
             <div class="button">
-              <button >Edit</button>
+              <button @click.stop="editTodo(index, { editMode: true })">
+                Edit
+              </button>
               <button @click.stop="deleteTodo(index)">Supprimer</button>
             </div>
+          </div>
+          <div v-else>
+            <TodoForm
+              :content="todo.content"
+              @cancel="editTodo(index, { editMode: false })"
+              @update="editTodo(index, { editMode: false, content: $event })"
+            />
+          </div>
         </li>
       </ul>
     </div>
@@ -28,6 +38,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useTodos } from '@/stores/todoStore'
+import type { Todo } from '@/interfaces/todo.interface'
+import TodoForm from '@/components/TodoForm.vue'
 const input = ref<string>('')
 
 const todoStore = useTodos()
@@ -36,10 +48,6 @@ const todos = todoStore.todoList
 console.log(todoStore.todoList)
 
 function addTodo() {
-  // todoStore.todos.push({
-  //   content: input.value,
-  //   done: false,
-  // });
   todoStore.addTodo(input.value)
   input.value = ''
 }
@@ -51,11 +59,16 @@ function deleteTodo(index: number) {
 function toggleDone(index: number) {
   todoStore.toggleDone(index)
 }
+
+function editTodo(index: number, edit: Partial<Todo>) {
+  todoStore.editTodo(index, edit)
+}
 </script>
 
 <style lang="scss">
 .card {
   width: 500px;
+  margin-bottom: 200px;
 }
 .todos {
   margin-top: 20px;
@@ -64,9 +77,11 @@ function toggleDone(index: number) {
 }
 
 .todo {
+  display: flex;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  height: 68px;
 }
 
 .button {
@@ -74,6 +89,7 @@ function toggleDone(index: number) {
 
   button {
     margin-left: 10px;
+    height: 40px;
   }
 }
 </style>
