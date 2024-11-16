@@ -1,14 +1,79 @@
 <template>
-  <section class="padd content-limit">
-    <div>
-      <h2>Leçon 127 : Introduction à Pinia</h2>
-      <div class="lesson">
-        <h3></h3>
+  <div class="p-20 d-flex justify-content-center">
+    <div class="card">
+      <h1 class="mb-20">Todo List</h1>
+      <div class="d-flex align-items-center">
+        <input v-model="input" type="text" class="flex-fill mr-20" />
+        <button @click="addTodo" class="btn btn-primary mr-20">Ajouter</button>
       </div>
+      <ul class="todos">
+        <li
+          v-for="(todo, index) in todos"
+          :key="todo.content"
+          class="d-flex align-items-center todo"
+          @click="toggleDone(index)"
+        >
+          <input :checked="todo.done" type="checkbox" v-model="todo.done" />
+          <span>{{ todo.content }} </span>
+            <div class="button">
+              <button >Edit</button>
+              <button @click.stop="deleteTodo(index)">Supprimer</button>
+            </div>
+        </li>
+      </ul>
     </div>
-  </section>
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue'
+import { useTodos } from '@/stores/todoStore'
+const input = ref<string>('')
 
-<style scoped lang="scss"></style>
+const todoStore = useTodos()
+const todos = todoStore.todoList
+
+console.log(todoStore.todoList)
+
+function addTodo() {
+  // todoStore.todos.push({
+  //   content: input.value,
+  //   done: false,
+  // });
+  todoStore.addTodo(input.value)
+  input.value = ''
+}
+
+function deleteTodo(index: number) {
+  todoStore.deleteTodo(index)
+}
+
+function toggleDone(index: number) {
+  todoStore.toggleDone(index)
+}
+</script>
+
+<style lang="scss">
+.card {
+  width: 500px;
+}
+.todos {
+  margin-top: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.todo {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button {
+  margin-left: auto;
+
+  button {
+    margin-left: 10px;
+  }
+}
+</style>
